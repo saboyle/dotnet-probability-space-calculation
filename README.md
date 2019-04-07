@@ -6,5 +6,6 @@ Exploratory project enabling setup of automated CI build setup using:
 
 * .NetCore
 * C#
+* Cake
 * Travis CI
 * Jenkins
