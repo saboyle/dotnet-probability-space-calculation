@@ -41,13 +41,14 @@ namespace PrectiveModellingTest
 
         public ShapeWithP2Supremacy()
         {
-            this.ps1 = new ProbabilitySpace2d(2.1, 2.1, 13);
+            this.ps1 = new ProbabilitySpace2d(2.1, 3.1, 13);
 
             this.pL = this.ps1.AggregateLower();
             this.pU = this.ps1.AggregateUpper();
             this.pD = this.ps1.AggregateDiagonal();
         }
 
+        [Fact]
         public void TestCorrectDominanceWithP2Supremacy()
         {
             Assert.True(this.pL < this.pU);
