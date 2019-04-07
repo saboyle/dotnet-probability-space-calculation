@@ -1,4 +1,4 @@
-#tool "nuget:?package=xunit.runner.console"
+#tool "nuget:?package=xunit.runner.console&version=2.4.1"
 
 var target = Argument("target", "Default");
 var solution = File("./PredictiveModelling.sln");
@@ -8,7 +8,7 @@ Task("Default")
 
 Task("Build")
 	.Does(() => {
-		DotNetBuild(solution);
+		MSBuild(solution);
 	});
 
 Task("xUnit")
