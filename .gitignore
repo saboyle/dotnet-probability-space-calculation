@@ -10,6 +10,9 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+# Exclude the tools directory to avoid all Cake & testing artefacts (SAB)
+tools/*
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
