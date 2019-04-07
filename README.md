@@ -9,3 +9,4 @@ Exploratory project enabling setup of automated CI build setup using:
 * Cake
 * Travis CI
 * Jenkins
+* Code Climate
