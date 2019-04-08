@@ -30,18 +30,33 @@ namespace PredictiveModelling
             this._space = ps;
         }
 
+        private double _AggregateProjection(Matrix<double> projection)
+        {
+            var Probs = projection.Enumerate();
+
+            double sum = 0;
+            foreach (double prob in Probs) sum += prob;
+
+            return sum;
+        }
+
+        private double _AggregateProjection(Vector<double> projection)
+        {
+            var Probs = projection.Enumerate();
+
+            double sum = 0;
+            foreach (double prob in Probs) sum += prob;
+
+            return sum;
+        }
+
         /// <summary>
         /// Aggregated probability for all outcomes where o1 > o2.
         /// </summary>
         public double AggregateLower()
         {
             Matrix<double> outcomes = this._space.StrictlyLowerTriangle();
-            var Probs = outcomes.Enumerate();
-
-            double sum = 0;
-            foreach (double prob in Probs) sum += prob;
-
-            return sum;
+            return _AggregateProjection(outcomes);
         }
 
         /// <summary>
@@ -50,12 +65,7 @@ namespace PredictiveModelling
         public double AggregateUpper()
         {
             Matrix<double> outcomes = this._space.StrictlyUpperTriangle();
-            var Probs = outcomes.Enumerate();
-
-            double sum = 0;
-            foreach (double prob in Probs) sum += prob;
-
-            return sum;
+            return _AggregateProjection(outcomes);
         }
 
         /// <summary>
@@ -63,13 +73,8 @@ namespace PredictiveModelling
         /// </summary>
         public double AggregateDiagonal()
         {
-            Vector<double> mkts = this._space.Diagonal();
-            var Probs = mkts.Enumerate();
-
-            double sum = 0;
-            foreach (double prob in Probs) sum += prob;
-
-            return sum;
+            Vector<double> outcomes = this._space.Diagonal();
+            return _AggregateProjection(outcomes);
         }
     }
 }
