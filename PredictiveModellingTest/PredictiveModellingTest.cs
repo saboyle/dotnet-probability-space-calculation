@@ -12,23 +12,20 @@ namespace PrectiveModellingTest
 
         public ShapeWithP1Supremacy()
         {
-            this.ps1 = new ProbabilitySpace2d(3.1, 2.1, 13);
+            ps1 = new ProbabilitySpace2d(3.1, 2.1, 13);
 
-            double pL = ps1.AggregateLower();
-            double pU = ps1.AggregateUpper();
-            double pD = ps1.AggregateDiagonal();
+            pL = ps1.AggregateLower();
+            pU = ps1.AggregateUpper();
+            pD = ps1.AggregateDiagonal();
 
-            this.pL = this.ps1.AggregateLower();
-            this.pU = this.ps1.AggregateUpper();
-            this.pD = this.ps1.AggregateDiagonal();
         }
 
         [Fact]
         public void TestCorrectDominanceWithP1Supremacy()
         {
-            Assert.True(this.pL > this.pU);
-            Assert.True(this.pL > this.pD);
-            Assert.True(this.pU > this.pD);
+            Assert.True(pL > pU);
+            Assert.True(pL > pD);
+            Assert.True(pU > pD);
         }
     }
 
@@ -41,19 +38,19 @@ namespace PrectiveModellingTest
 
         public ShapeWithP2Supremacy()
         {
-            this.ps1 = new ProbabilitySpace2d(2.1, 3.1, 13);
+            ps1 = new ProbabilitySpace2d(2.1, 3.1, 13);
 
-            this.pL = this.ps1.AggregateLower();
-            this.pU = this.ps1.AggregateUpper();
-            this.pD = this.ps1.AggregateDiagonal();
+            pL = ps1.AggregateLower();
+            pU = ps1.AggregateUpper();
+            pD = ps1.AggregateDiagonal();
         }
 
         [Fact]
         public void TestCorrectDominanceWithP2Supremacy()
         {
-            Assert.True(this.pL < this.pU);
-            Assert.True(this.pL > this.pD);
-            Assert.True(this.pU > this.pD);
+            Assert.True(pL < pU);
+            Assert.True(pL > pD);
+            Assert.True(pU > pD);
         }
     }
 }
