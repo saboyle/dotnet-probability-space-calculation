@@ -1,16 +1,17 @@
-using Xunit;
 using PredictiveModelling;
+using NUnit.Framework;
 
 namespace PrectiveModellingTest
 {
-    public class ShapeWithP1Supremacy
+    [TestFixture]
+    public class ShapeWithP1SupremacyN
     {
         private readonly ProbabilitySpace2d ps1;
         private readonly double pL;
         private readonly double pU;
         private readonly double pD;
 
-        public ShapeWithP1Supremacy()
+        public ShapeWithP1SupremacyN()
         {
             ps1 = new ProbabilitySpace2d(3.1, 2.1, 13);
 
@@ -20,8 +21,8 @@ namespace PrectiveModellingTest
 
         }
 
-        [Fact]
-        public void TestCorrectDominanceWithP1Supremacy()
+        [Test]
+        public void TestCorrectDominanceWithP1SupremacyN()
         {
             Assert.True(pL > pU);
             Assert.True(pL > pD);
@@ -29,14 +30,15 @@ namespace PrectiveModellingTest
         }
     }
 
-    public class ShapeWithP2Supremacy
+    [TestFixture]
+    public class ShapeWithP2SupremacyN
     {
         private readonly ProbabilitySpace2d ps1;
         private readonly double pL;
         private readonly double pU;
         private readonly double pD;
 
-        public ShapeWithP2Supremacy()
+        public ShapeWithP2SupremacyN()
         {
             ps1 = new ProbabilitySpace2d(2.1, 3.1, 13);
 
@@ -45,8 +47,8 @@ namespace PrectiveModellingTest
             pD = ps1.AggregateDiagonal();
         }
 
-        [Fact]
-        public void TestCorrectDominanceWithP2Supremacy()
+        [Test]
+        public void TestCorrectDominanceWithP2SupremacyN()
         {
             Assert.True(pL < pU);
             Assert.True(pL > pD);
