@@ -1,6 +1,5 @@
 ﻿using MathNet.Numerics.Distributions;
 using MathNet.Numerics.LinearAlgebra;
-using System;
 
 namespace PredictiveModelling
 {
@@ -73,8 +72,17 @@ namespace PredictiveModelling
         /// </summary>
         public double AggregateDiagonal()
         {
-            Vector<double> outcomes = this._space.Diagonal();
+            Vector<double> outcomes = _space.Diagonal();
             return _AggregateProjection(outcomes);
+        }
+
+        /// <summary>
+        /// Return the 2d Matrix difference with specified other space.
+        /// </summary>
+        public Matrix <double> Difference(ProbabilitySpace2d other)
+        {
+            Matrix <double> diff = this. _space - other._space;
+            return diff;
         }
     }
 }
