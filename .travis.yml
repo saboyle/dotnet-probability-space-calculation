@@ -5,6 +5,22 @@ dist: xenial
 dotnet: 2.2
 solution: PredictiveModelling.sln
 
+env:
+  global:
+    - CC_TEST_REPORTER_ID=494edcdf730ceee27292ccc3a079c9ffee271290b1fa48cda5cf03965deb3d53
+
 script:
  - dotnet restore
- - dotnet test ./PredictiveModellingTest/PredictiveModellingTest.csproj
+ - dotnet test ./PredictiveModellingTest/PredictiveModellingTest.csproj /p:CollectCoverage=true
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+script:
+ - dotnet restore
+ - dotnet test ./PredictiveModellingTest/PredictiveModellingTest.csproj /p:CollectCoverage=true
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
