@@ -15,9 +15,9 @@ script:
    - dotnet test ./PredictiveModellingTest/PredictiveModellingTest.csproj /p:CollectCoverage=true
 
 before_script:
-   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./PredictiveModellingTest/cc-test-reporter
-   - chmod +x ./PredictiveModellingTest/cc-test-reporter
-   - ./PredictiveModellingTest/cc-test-reporter before-build
+   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+   - chmod +x ./cc-test-reporter
+   - .//cc-test-reporter before-build
 
 script:
    - dotnet restore
@@ -25,4 +25,4 @@ script:
 
 
 after_script:
-   - cd PredictiveModellingTest && ./cc-test-reporter after-build --coverage-input-type cobertura --exit-code $TRAVIS_TEST_RESULT -d
+   - cd ./cc-test-reporter after-build --coverage-input-type cobertura --exit-code $TRAVIS_TEST_RESULT -d
