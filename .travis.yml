@@ -20,7 +20,7 @@ before_script:
 
 script:
  - dotnet restore
- - dotnet test ./PredictiveModellingTest/PredictiveModellingTest.csproj /p:CollectCoverage=true
+ - dotnet test ./PredictiveModellingTest/PredictiveModellingTest.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
 
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
