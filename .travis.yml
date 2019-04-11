@@ -24,4 +24,4 @@ script:
 
 
 after_script:
-  - ./cc-test-reporter after-build --coverage-input-type cobertura --exit-code $TRAVIS_TEST_RESULT  --prefix PredictiveModellingTest
+  - ./cc-test-reporter after-build --coverage-input-type cobertura --exit-code $TRAVIS_TEST_RESULT
