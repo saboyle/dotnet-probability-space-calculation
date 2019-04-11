@@ -1,6 +1,6 @@
 # wpf-dotnet-probability-space-visualisation
 
-[![Build Status](https://travis-ci.com/saboyle/wpf-dotnet-probability-space-visualisation.svg?branch=master)]
+![Build Status](https://travis-ci.com/saboyle/wpf-dotnet-probability-space-visualisation.svg?branch=master)
 
 Exploratory project enabling setup of various automated CI/CD components and services:
 
