@@ -1,12 +1,35 @@
 # wpf-dotnet-probability-space-visualisation
 
-[![Build Status](https://travis-ci.com/saboyle/wpf-dotnet-probability-space-visualisation.svg?branch=master)](https://travis-ci.com/saboyle/wpf-dotnet-probability-space-visualisation) [![Maintainability](https://api.codeclimate.com/v1/badges/020e3f419f6339db60a6/maintainability)](https://codeclimate.com/github/saboyle/wpf-dotnet-probability-space-visualisation/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/020e3f419f6339db60a6/test_coverage)](https://codeclimate.com/github/saboyle/wpf-dotnet-probability-space-visualisation/test_coverage)
+[![Build Status](https://travis-ci.com/saboyle/wpf-dotnet-probability-space-visualisation.svg?branch=master)]
 
-Exploratory project enabling setup of automated CI build setup using:
+Exploratory project enabling setup of various automated CI/CD components and services:
 
 * .NetCore
 * C#
+
+## Components under consideration / evaluation
 * Cake
 * Travis CI
 * Jenkins
 * Code Climate
+* Sonar Cloud
+* Team City
+
+## Running Notes
+* Example running Cake file created / included in root i.e.
+``` powershell
+./build.ps1
+```
+
+* Currently works Travis CI with automated build / badge status update.
+* Currently working with Jenkins using Cake build script.
+* Code climate integration limited to code analysis. Sonar Cloud will be evaluated as an alternative.
+* Problems with Code Climate coverage reporting [suspected platform issue].
+
+### To execute from the command line
+```
+dotnet restore
+dotnet test ./PredictiveModellingTest/PredictiveModellingTest.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./PredictiveModellingTest/cobertura.xml
+```
+
+
