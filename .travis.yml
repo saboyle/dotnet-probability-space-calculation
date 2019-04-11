@@ -6,6 +6,7 @@ dotnet: 2.2
 solution: PredictiveModelling.sln
 
 env:
+# CC_TEST_REPORTER_ID (retrieved from Code Climate UI)
   global:
     - CC_TEST_REPORTER_ID=494edcdf730ceee27292ccc3a079c9ffee271290b1fa48cda5cf03965deb3d53
 
