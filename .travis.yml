@@ -20,8 +20,8 @@ before_script:
 
 script:
  - dotnet restore
- - dotnet test ./PredictiveModellingTest/PredictiveModellingTest.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=cobertura.xml
+ - dotnet test ./PredictiveModellingTest/PredictiveModellingTest.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput="../cobertura.xml"
 
 
 after_script:
-  - ./cc-test-reporter after-build --coverage-input-type cobertura -p "./PredictiveModellingTest/" --exit-code $TRAVIS_TEST_RESULT -d
+  - ./cc-test-reporter after-build --coverage-input-type cobertura --exit-code $TRAVIS_TEST_RESULT -d
