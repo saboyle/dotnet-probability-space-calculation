@@ -2,10 +2,11 @@
 
 ![Build Status](https://travis-ci.com/saboyle/wpf-dotnet-probability-space-visualisation.svg?branch=master)
 
-Exploratory project enabling setup of various automated CI/CD components and services:
+Exploratory (scratch) project enabling setup of various automated CI/CD components and services:
 
-* .NetCore
-* C#
+# Stack
+* .NetCore 2.2
+* C# 7
 
 ## Components under consideration / evaluation
 * Cake
@@ -20,16 +21,14 @@ Exploratory project enabling setup of various automated CI/CD components and ser
 ``` powershell
 ./build.ps1
 ```
-
-* Currently works Travis CI with automated build / badge status update.
-* Currently working with Jenkins using Cake build script.
-* Code climate integration limited to code analysis. Sonar Cloud will be evaluated as an alternative.
-* Problems with Code Climate coverage reporting [suspected platform issue].
-
 ### To execute from the command line
 ```
 dotnet restore
 dotnet test ./PredictiveModellingTest/PredictiveModellingTest.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./PredictiveModellingTest/cobertura.xml
 ```
 
-
+### Status
+* Travis CI automated build / badge status update [working].
+* Jenkins automated build using Cake build script [working].
+* Code Climate integration (code analysis) [working].
+* Code Climate coverage reporting [broken - suspected upstream / platform issue].
