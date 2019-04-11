@@ -25,4 +25,4 @@ script:
 
 
 after_script:
-   - cd PredictiveModellingTest && cc-test-reporter after-build --coverage-input-type cobertura --exit-code $TRAVIS_TEST_RESULT -d
+   - cd PredictiveModellingTest && ./cc-test-reporter after-build --coverage-input-type cobertura --exit-code $TRAVIS_TEST_RESULT -d
