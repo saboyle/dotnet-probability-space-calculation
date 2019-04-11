@@ -17,7 +17,7 @@ Exploratory (scratch) project enabling setup of various automated CI/CD componen
 * Team City
 
 ## Running Notes
-* Example running Cake file created / included in root i.e.
+Example running Cake file created / included in root i.e.
 ``` powershell
 ./build.ps1
 ```
