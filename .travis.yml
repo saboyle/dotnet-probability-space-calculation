@@ -21,8 +21,8 @@ before_script:
 
 script:
  - dotnet restore
- - dotnet test ./PredictiveModellingTest/PredictiveModellingTest.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=opencover.xml
+- dotnet test ./PredictiveModellingTest/PredictiveModellingTest.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=cobertura.xml
 
 
 after_script:
-  - ./cc-test-reporter after-build --coverage-input-type opencover --exit-code $TRAVIS_TEST_RESULT -d
+  - ./cc-test-reporter after-build --prefix $(readlink -f .) --coverage-input-type cobertura --exit-code $TRAVIS_TEST_RESULT -d
