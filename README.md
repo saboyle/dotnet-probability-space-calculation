@@ -2,13 +2,15 @@
 
 ![Build Status](https://travis-ci.com/saboyle/wpf-dotnet-probability-space-visualisation.svg?branch=master)
 
-![Example](./images/sample2d.png)
+![Example](./images/sample2dheatmap.png)
+Visualisation using WPF dynamically generated heatmap.
 
 Exploratory (scratch) project enabling setup of various automated CI/CD components and services:
 
 # Stack
 * .NetCore 2.2
 * C# 7
+* Math.net Numerics
 
 ## Components under consideration / evaluation
 * Cake
