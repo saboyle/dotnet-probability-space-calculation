@@ -2,6 +2,8 @@
 
 ![Build Status](https://travis-ci.com/saboyle/wpf-dotnet-probability-space-visualisation.svg?branch=master)
 
+![Example](./images/sample2d.png)
+
 Exploratory (scratch) project enabling setup of various automated CI/CD components and services:
 
 # Stack
