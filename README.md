@@ -1,4 +1,4 @@
-# wpf-dotnet-probability-space-visualisation
+# dotnet-probability-space-calculation
 
 ![Build Status](https://travis-ci.com/saboyle/wpf-dotnet-probability-space-visualisation.svg?branch=master)
 
