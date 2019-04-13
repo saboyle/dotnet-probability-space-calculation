@@ -46,6 +46,7 @@ dotnet test ./PredictiveModellingTest/PredictiveModellingTest.csproj
 * Code Climate coverage reporting [broken - suspected upstream / platform issue].
 
 ### Follow-on (Future possibly private dev't) 
+* Explore Azure Devops (https://azure.microsoft.com/en-gb/product-categories/devops/)
 * Explore AppVeyor (https://www.appveyor.com/docs/)
 * Explore use of Sonar Cloud (https://sonarcloud.io/about)
 * Explore integration of selenium / appium testing, integrated with Cake / Travis.
