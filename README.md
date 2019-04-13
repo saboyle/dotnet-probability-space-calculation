@@ -1,6 +1,6 @@
 # dotnet-probability-space-calculation
 
-![Build Status](https://travis-ci.com/saboyle/wpf-dotnet-probability-space-visualisation.svg?branch=master)
+![Build Status](https://travis-ci.com/saboyle/dotnet-probability-space-calculation.svg?branch=master)
 
 ![Example](./images/sample2dheatmap.png)
 Visualisation using WPF dynamically generated heatmap.
